@@ -17,7 +17,13 @@ include("./controller.php");
     </form>
 
     <ul>
-        <li>Min test notes</li>
+        <!--Her starter jeg mit loop-->
+        <?php foreach(getFromFile() as $i=> $note) { ?>
+            <li>
+                 <?php echo $note;?>
+                 <a href="?indeks=<?php echo $i; ?>" >Slet</a>
+            </li>
+        <?php } ?>
     </ul>
 </body>
 </html>
